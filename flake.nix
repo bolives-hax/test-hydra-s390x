@@ -4,7 +4,7 @@
   };
   outputs = { self, nixpkgs, ... }: {
     packages.s390x-linux = let pkgs = import nixpkgs {system = "s390x-linux"; }; in
-      pkgs.neofetch;
+      pkgs.gcc14;
 
     hydraJobs = {
       inherit (self)
